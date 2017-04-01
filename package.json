@@ -1,7 +1,7 @@
 {
   "name": "mysite",
   "version": "1.0.0",
-  "description": "This is my Personal Site.",
+  "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,9 +14,9 @@
   "author": "Bora ALAP",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BoraALAP/mywebsite2017/issues"
+    "url": " "
   },
-  "homepage": "https://github.com/BoraALAP/mywebsite2017",
+  "homepage": " ",
   "devDependencies": {
     "gulp": "latest",
     "gulp-coffee": "latest",
