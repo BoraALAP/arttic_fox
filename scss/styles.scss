@@ -2,7 +2,7 @@
 /**************************         
 IMPORT
 ***************************/     
-@import "imports.scss"; // media queries - if needed 
+@import "_imports.scss"; // media queries - if needed 
 
 
 /**************************
@@ -13,18 +13,11 @@ TEMPLATES begin
         ! ! !    R E A D   T H I S    ! ! !  
         -----------------
          
-        It's recomended to use/create a custom css file (or place them at the end of this file) 
-        to do you customizations in order to easily update the main css files without loosing your changes
+        It's recomended to use/create a custom css file (or place them at the end of this file) to do you customizations in order to easily update the main css files without loosing your changes
         
         
         > > Please take also a look at the documentation file.       
-        
-         
-         
-        
-                         
-
-
+    
 
 /*-----------------------------------------------------------------------------------
 
