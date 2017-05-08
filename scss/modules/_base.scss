@@ -9,25 +9,37 @@ h1,h2,h3,h4,h5,h6{
 h1{
     font:{
         family: $font1;
-        size: 2.5em;
+        size: 1.8em;
         weight:900;
+    }
+    @include MQ(M){
+        font:{
+            size: 2.5em;
+        } 
     }
 }
 
 h2{
     font:{
         family: $font1;
-        size: 2em;
+        size: 1.5em;
         weight:700;
+    }
+    line-height: 2.5em;
+    @include MQ(M){
+        font:{
+            size: 2em;
+        } 
     }
 }
 
 h3{ 
     font:{
         family: $font1;
-        size: 1.8em;
+        size: 1.3em;
         weight:700;
     }
+    text-transform: uppercase;
 }
 
 h4{
@@ -58,17 +70,23 @@ h6{
 p{ 
     font:{
         family: $font1;
-        size: 0.75em;
+        size: 0.85em;
         weight:300;
     }
     margin:0;
-    color: $gray4; 
+    color: $white; 
     line-height:2em;
    
 }
 
 a{
     text-decoration:none;
+    color: $black;
+    &:focus,&:active,&:visited{
+        outline:none;
+        text-decoration:none;
+        
+    }
 }
 
 nav{
