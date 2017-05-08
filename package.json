@@ -1,7 +1,7 @@
 {
-  "name": "mysite",
+  "name": "arttixfox",
   "version": "1.0.0",
-  "description": "My website Project Template",
+  "description": "This is the website for Arttic Fox",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
