@@ -58,18 +58,21 @@ body{
     margin:0;
     padding:0;  
     overflow-x: hidden;
+    height:100%;
+    width: 100%;
 
 }
 
 ul{
     list-style-type: none;
     padding-left:0;
-    margin-bottom:0;
+    margin-bottom:0; 
         
 }
 
 .section{
     min-height:30vh;
+    position:relative;
 
     @include MQ(M){
         min-height:60vh;
@@ -103,62 +106,74 @@ ul{
         width: 80px;
         max-height:80px;
         transition: all 1.7s ease;
-        @include MQ(M){
-            width: 110px;
-            max-height:110px;
-        }
+        // @include MQ(M){
+        //     width: 110px;
+        //     max-height:110px;
+        // }
         #logo_icon{
             fill:$white;
         }
+    }
+    h1{
+        font:{
+            family: $font1;
+            size: 1.8em;
+            weight:900;
+        }
+        // @include MQ(M){
+        //     font:{
+        //         size: 2.5em;
+        //     } 
+        // }
     }
     &.play{
         
     }
 }  
 
-#header{
+header{
     background-color: $black;
-
-    .content{
-        @include linearGradient(45deg, $gray1, $white); 
-        padding-bottom: 5vh;
-        top:15vh;
-
-        .carousel-indicators {
-            width: 45vw;
-            left:inherit;
-            @include MQ(M){
-                width: 30vw;
-            }
-            & li{
-            text-indent: 0;
-            max-width: none;
-            margin: auto 3vw;
-            flex:1;
-            width: 5vw;
-            color:transparent;
-                &.active{
-                    background-color:$black;
-                }
-            }
-        }
-        .carousel{
-            padding: 10vw;
-            .carousel-item{
-                flex-direction: column;
-            }
-        }
-
-        p{ 
-        color:$black;  
-        }
-        h2{
-            color:$black;
-            text-transform: uppercase;
-        }
-
-    }
 }
+.content{
+    @include linearGradient(45deg, $gray1, $white); 
+    padding-bottom: 5vh;
+    top:15vh;
+
+    .carousel-indicators {
+        width: 45vw;
+        left:inherit;
+        @include MQ(M){
+            width: 30vw;
+        }
+        & li{
+        text-indent: 0;
+        max-width: none;
+        margin: auto 3vw;
+        flex:1;
+        width: 5vw;
+        color:transparent;
+            &.active{
+                background-color:$black;
+            }
+        }
+    }
+    .carousel{
+        padding: 10vw;
+        .carousel-item{
+            flex-direction: column;
+        }
+    }
+
+    p{ 
+    color:$black;  
+    }
+    h2{
+        color:$black;
+        text-transform: uppercase;
+    }
+
+}
+
 
 
 #whatwedo{
@@ -209,20 +224,27 @@ ul{
         flex-direction: column;
         padding:10vh 10vw;
         text-align: center;
-        h3{
-            color:$white;
-            margin:20px 0;
-        }
-        ul{
-          &:first-child{
+
+        .todo_list{
+            &:first-child{
             margin-bottom: 20px;
-            padding-bottom:20px;
-            border-bottom: 2px solid $white;
-          }  
         }
-        li{
-            color:white;
-            padding: 15px;
+            h3{
+                color:$white;
+                margin:20px 0;
+            }
+            ul{
+              &:first-child{
+                margin-bottom: 20px;
+                padding-bottom:20px;
+                border-bottom: 2px solid $white;
+              }  
+            }
+            li{
+                color:white;
+                padding: 15px; 
+                
+            }
             
         }
     }
@@ -234,20 +256,26 @@ ul{
     .information{
         background-color:$white; 
         width: 70vw;
-        position:absolute;
         right:0;
         bottom: 10vh;
         padding: 3vh 0;
         text-align: center;
+        position: absolute;
+        z-index: 500;
         p{
             color:$black;
             margin:2vh 0;
         }
     }
-    .map{
-        img{
-            width:100%; 
-            height: 400px;
+    #map {
+        height: 600px;
+    }
+    .map_container{
+        .map{
+            img{
+                width:100%; 
+                height: 400px;
+            }
         }
     }
     .copy_message{
@@ -257,11 +285,10 @@ ul{
         justify-content: center;
         align-items:center;
         height:10vh;
-        position:absolute;
         width: 100%; 
         bottom:0;
         font:{
-            size:0.6em;
+            size:0.6em; 
         }
     }
 }
